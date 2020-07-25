@@ -1,0 +1,24 @@
+[package]
+name = "misfire"
+version = "0.1.0"
+description = "Demonstrates build failures of rocket_codegen"
+authors = ["Joakim Soderlund <joakim.soderlund@gmail.com>"]
+edition = "2018"
+
+# Fails to build.
+[profile.dev]
+codegen-units = 2
+opt-level = 2
+
+# Builds successfully.
+# [profile.dev]
+# codegen-units = 2
+# opt-level = 1
+
+# Builds successfully.
+# [profile.dev]
+# codegen-units = 1
+# opt-level = 2
+
+[dependencies.rocket]
+git = "https://github.com/SergioBenitez/Rocket.git"
