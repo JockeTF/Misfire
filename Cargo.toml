@@ -20,5 +20,6 @@ opt-level = 2
 # codegen-units = 1
 # opt-level = 2
 
-[dependencies.rocket]
-git = "https://github.com/SergioBenitez/Rocket.git"
+[dependencies]
+cookie = { version = "0.14.2" }
+time = { version = "0.2.16" }
