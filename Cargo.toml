@@ -5,6 +5,7 @@ description = "Demonstrates build failures of rocket_codegen"
 authors = ["Joakim Soderlund <joakim.soderlund@gmail.com>"]
 edition = "2018"
 
+
 # Fails to build.
 [profile.dev]
 codegen-units = 2
@@ -19,6 +20,16 @@ opt-level = 2
 # [profile.dev]
 # codegen-units = 1
 # opt-level = 2
+
+
+# Fails to build.
+[dependencies.time]
+version = "=0.2.17"
+
+# Builds successfully.
+# [dependencies.time]
+# version = "=0.2.18"
+
 
 [dependencies.rocket]
 git = "https://github.com/SergioBenitez/Rocket.git"
